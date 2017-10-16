@@ -1,0 +1,13 @@
+<template>
+
+  <!-- first, we include the Bootstrap css, which was bundled as "css/bootstrap.css" -->
+  <require from="bootstrap/css/bootstrap.css"></require>
+
+  <!-- next, lets drive the accordion example through data in our view model -->
+  <div class="container">
+
+    <h1>${message}</h1>
+
+    <router-view></router-view>
+  </div>
+</template>

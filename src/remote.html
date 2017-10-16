@@ -1,0 +1,27 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+
+  <div class="row">
+    <div class="btn-group btn-group-lg col-12" role="group" aria-label="Playback">
+      <button click.delegate="play()" type="button" class="btn btn-primary">Play / Pause</button>
+      <button click.delegate="stop()" type="button" class="btn btn-danger">Stop</button>
+    </div>
+
+    <div class="btn-group col-12 pt-4" role="group" aria-label="Volume">
+      <button click.delegate="volumeDown()" type="button" class="btn btn-secondary">- Volume</button>
+      <button click.delegate="volumeUp()" type="button" class="btn btn-secondary">+ Volume</button>
+    </div>
+
+    <div class="btn-group col-12 pt-2" role="group" aria-label="Playback Position">
+      <button click.delegate="back600()" type="button" class="btn btn-secondary">&lt;&lt; 10 min</button>
+      <button click.delegate="back30()" type="button" class="btn btn-secondary">&lt; 30 sec</button>
+      <button click.delegate="fwd30()" type="button" class="btn btn-secondary">&gt; 30 sec</button>
+      <button click.delegate="fwd600()" type="button" class="btn btn-secondary">&gt;&gt; 10 min</button>
+    </div>
+
+    <div class="btn-group col-12 pt-2" role="group" aria-label="Subtitle">
+      <button click.delegate="subtitleToggle()" type="button" class="btn btn-secondary">Toggle Subtitle</button>
+      <button click.delegate="subtitleNext()" type="button" class="btn btn-secondary">Next Subtitle</button>
+    </div>
+  </div>
+</template>

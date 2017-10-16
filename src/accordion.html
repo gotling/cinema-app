@@ -1,0 +1,22 @@
+<template>
+    <require from="bootstrap/css/bootstrap.css"></require>
+
+    <div class="panel-group mt-4" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default" repeat.for="movie of movies">
+        <div class="panel-heading" role="tab" id="heading-${$index}">
+          <h4 class="panel-title">
+            ${movie.date}&nbsp;
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-${$index}" aria-expanded="true" aria-controls="collapse-${$index}">
+              ${movie.name}
+            </a>
+            <!-- <span if.bind="item.UserData.IsFavorite"> &lt;- Todays movie</span> -->
+          </h4>
+        </div>
+        <div id="collapse-${$index}" class="panel-collapse ${ !item.UserData.IsFavorite ? 'collapse' : '' } ${$first && 'in'}" role="tabpanel" aria-labelledby="heading-${index}">
+          <div class="panel-body">
+            <button click.delegate="playNow(movie)" class="btn">Play now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>
